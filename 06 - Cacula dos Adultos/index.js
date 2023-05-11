@@ -1,28 +1,20 @@
 const lista = [1, 2, 1, 6, 9, 8, 12]
 
-const maiores = inputLista.filter((numeros) => {
-    return numeros >= 18
-})
-const resultado = maiores.sort((a, b) => {
-    return a - b
-})
 
-resultado[0] === undefined ? console.log("CRESCA E APARECA") : console.log(resultado[0]);
+let maisnovo = Infinity;
+let listaAtualizada = [];
 
-// 2 forma
-
-const maiores2 = inputLista.filter((numeros) => {
-    return numeros >= 18
-})
-
-const novaArray = []
-for (let i = 0; i < maiores2.length; i++) {
-    let ordem = maiores2[i]
-    for(let j = i+1; j < maiores2.length; j++) {
-        if (maiores2[j] < ordem) {
-            ordem = maiores2
-        }
+for (let i = 0; i < lista.length; i++) {
+    if (lista[i] >= 18) {
+        listaAtualizada.push(lista[i]);
     }
-    novaArray.push(ordem);
 }
-novaArray[0] === undefined ? console.log("CRESCA E APARECA") : console.log(novaArray[0]);
+for (let i = 0; i < listaAtualizada.length; i++) {
+    if (listaAtualizada[i] < maisnovo) {
+        maisnovo = listaAtualizada[i];
+    }
+} if (listaAtualizada.length !== 0) {
+    console.log(maisnovo);
+} else {
+    console.log('CRESCA E APARECA')
+}

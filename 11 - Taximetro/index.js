@@ -1,16 +1,20 @@
-const inputMIN = 18
-const inputKM = 7.5
+const min = 18
+const km = 7.5
 
-let valor = 0
+const valorPorMinuto = 50;
+const valorPorKm = 70;
+const descontoTempo = 30;
+const descontoKm = 50;
+let valortotal = 0;
 
-if (inputKM <= 10) {
-    valor += (inputKM * 70)
+if (min <= 20) {
+    valortotal += valorPorMinuto * min;
 } else {
-    valor += (10 * 70) + ((inputKM - 10) * 50)
+    valortotal += (20 * valorPorMinuto) + ((min - 20) * descontoTempo);
 }
-if (inputMIN <= 20) {
-    valor += (inputMIN * 50)
+if (km <= 10) {
+    valortotal += valorPorKm * km;
 } else {
-    valor += (20 * 50) + ((inputMIN - 20) * 30)
+    valortotal += (10 * valorPorKm) + ((km - 10) * descontoKm);
 }
-console.log(valor)
+console.log(valortotal);

@@ -1,69 +1,63 @@
-const inputJogadores = [
-    {
-      "nome": "Herman",
-      "jogada": 1
-    },
-    {
-      "nome": "Rhodes",
-      "jogada": 0
-    },
-    {
-      "nome": "Beach",
-      "jogada": 0
-    },
-    {
-      "nome": "Laurel",
-      "jogada": 0
-    },
-    {
-      "nome": "Beatrice",
-      "jogada": 0
-    },
-    {
-      "nome": "Alison",
-      "jogada": 0
-    },
-    {
-      "nome": "Saundra",
-      "jogada": 0
-    },
-    {
-      "nome": "Klein",
-      "jogada": 0
-    }
-  ]
-
-  let contador0 = 0
-  let contador1 = 0
-
-const players = inputJogadores.map((elemento) => {
-
-  if (elemento.jogada === 0) {
-      contador0 ++
-  } else {
-      contador1 ++
+const jogadores = [
+  {
+    "nome": "Herman",
+    "jogada": 1
+  },
+  {
+    "nome": "Rhodes",
+    "jogada": 0
+  },
+  {
+    "nome": "Beach",
+    "jogada": 0
+  },
+  {
+    "nome": "Laurel",
+    "jogada": 0
+  },
+  {
+    "nome": "Beatrice",
+    "jogada": 0
+  },
+  {
+    "nome": "Alison",
+    "jogada": 0
+  },
+  {
+    "nome": "Saundra",
+    "jogada": 0
+  },
+  {
+    "nome": "Klein",
+    "jogada": 0
   }
+]
 
-});
+let jogadas1 = 0;
+let jogadas0 = 0;
 
-if (contador0 === 1) {
-inputJogadores.find((objeto) => {
-if (objeto.jogada === 0){
-  console.log(objeto.nome)
- }
-})
-} else if (contador1 === 1) {
-for (let objeto of inputJogadores) {
-if (objeto.jogada === 1){
-    console.log(objeto.nome)
+for (let item of jogadores) {
+  if (item.jogada === 1) {
+    jogadas1++;
+  } else {
+    jogadas0++;
+  }
 }
-}
+if (jogadas1 === 1) {
+  for (let item of jogadores) {
+    if (item.jogada === 1) {
+      console.log(item.nome);
+    }
+  }
+} else if (jogadas0 === 1) {
+  for (let item of jogadores) {
+    if (item.jogada === 0) {
+      console.log(item.nome);
+    }
+  }
 } else {
-console.log("NINGUEM")
+  console.log("NINGUEM")
 }
-
-
-
 
 
 
@@ -72,11 +66,11 @@ console.log("NINGUEM")
 // })
 
 // let contadorDeTrue = 0
-// let contadorDeFalse = 0 
+// let contadorDeFalse = 0
 
 // const contar = boolean.map((boolean) => {
-// boolean ? contadorDeTrue++ : contadorDeFalse++   
-// }) 
+// boolean ? contadorDeTrue++ : contadorDeFalse++
+// })
 
 // if(contadorDeTrue === 1) {
 
